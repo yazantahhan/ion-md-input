@@ -44,9 +44,6 @@ angular.module('ionMdInput', [])
       }, function(value, name) {
         if (angular.isDefined(value)) {
           input.attr(name, value);
-          if(name==='id'){
-            label.removeAttr(id);
-          }
         }
       });
 

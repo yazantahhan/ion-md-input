@@ -6,7 +6,6 @@ var rename = require('gulp-rename');
 var ngAnnotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 var tag_version = require('gulp-tag-version');
-var git = require('gulp-git');
 var bump = require('gulp-bump');
 var filter = require('gulp-filter');
 
