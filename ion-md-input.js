@@ -27,6 +27,7 @@ angular.module('ionMdInput', [])
       /*Start From here*/
       var input = element.find('input');
       angular.forEach({
+        'id': attr.id,
         'name': attr.name,
         'type': attr.type,
         'ng-value': attr.ngValue,
@@ -43,6 +44,9 @@ angular.module('ionMdInput', [])
       }, function(value, name) {
         if (angular.isDefined(value)) {
           input.attr(name, value);
+          if(name==='id'){
+            label.removeAttr(id);
+          }
         }
       });
 
@@ -68,6 +72,10 @@ angular.module('ionMdInput', [])
             this.classList.add(dirtyClass);
           }
         };
+
+        if($element.attr('id')){
+          $element.removeAttr('id');
+        }
 
         //Lets check if there is a value on load
         ionic.DomUtil.ready(function() {
